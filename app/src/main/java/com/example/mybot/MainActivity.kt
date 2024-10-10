@@ -44,6 +44,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.Green
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
@@ -93,7 +94,7 @@ class MainActivity : ComponentActivity() {
                             Box(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .background(MaterialTheme.colorScheme.primary)
+                                    .background(Color.LightGray)
                                     .height(70.dp)
                                     .padding(horizontal = 20.dp)
                             ) {
@@ -180,7 +181,7 @@ class MainActivity : ComponentActivity() {
                             },
                         imageVector = Icons.Rounded.AddPhotoAlternate,
                         contentDescription = "Add Photo",
-                        tint = MaterialTheme.colorScheme.primary
+                        tint = Color.LightGray
                     )
                 }
 
@@ -209,7 +210,7 @@ class MainActivity : ComponentActivity() {
                         },
                     imageVector = Icons.Rounded.Send,
                     contentDescription = "Send prompt",
-                    tint = MaterialTheme.colorScheme.primary
+                    tint = Color.LightGray
                 )
 
             }
@@ -241,11 +242,11 @@ class MainActivity : ComponentActivity() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(12.dp))
-                    .background(MaterialTheme.colorScheme.primary)
+                    .background(MaterialTheme.colorScheme.inverseOnSurface)
                     .padding(16.dp),
                 text = prompt,
                 fontSize = 17.sp,
-                color = MaterialTheme.colorScheme.onPrimary
+                color = Color.White
             )
 
         }
@@ -260,11 +261,11 @@ class MainActivity : ComponentActivity() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(12.dp))
-                    .background(Green)
+                    .background(MaterialTheme.colorScheme.inverseOnSurface)
                     .padding(16.dp),
                 text = response,
                 fontSize = 17.sp,
-                color = MaterialTheme.colorScheme.onPrimary
+                color = Color.White
             )
 
         }
